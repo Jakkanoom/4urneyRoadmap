@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev":"vite",
     "build": "vite build",
     "deploy": "vite build && git init && git add . && git commit -m 'deploy' && git push -f https://github.com/Jakkanoom/4urneyRoadmap.git main:gh-pages"
   }

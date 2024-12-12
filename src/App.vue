@@ -1,30 +1,56 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <Header />
+    <DigitalTwin />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script lang="ts">
+import Header from "./components/Header.vue";
+import DigitalTwin from "./components/DigitalTwin.vue";
+
+export default {
+  components: {
+    Header,
+    DigitalTwin,
+  },
+};
+</script>
+
+<style>
+/* Reset for body and html */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  animation: backgroundColorChange 10s infinite alternate; /* Background animation */
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+
+/* Background transition animation */
+@keyframes backgroundColorChange {
+  0% {
+    background-color: #efc1e7dc; /* Starting color */
+  }
+  100% {
+    background-color: #d2deff; /* Ending color */
+  }
+}
+
+</style>
+
+
+<style>
+#app {
+  margin: 1;
+  padding: 0.5%;
 }
 </style>
+
+
