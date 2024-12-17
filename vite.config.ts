@@ -5,7 +5,7 @@ import path from 'path';
 export default defineConfig(({ command }) => {
   return {
     plugins: [vue()],
-    base: '/4urneyRoadmap/',
+    base: command === 'build' ? '/4urneyRoadmap/' : '/', // Use '/' for dev, '/4urneyRoadmap/' for build
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
