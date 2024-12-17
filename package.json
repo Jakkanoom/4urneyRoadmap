@@ -7,12 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "deploy": "vite build && git add dist -f && git commit -m 'deploy' && git push -f https://github.com/Jakkanoom/4urneyRoadmap.git $(git subtree split --prefix dist main):gh-pages"
-  }
-  ,
+  },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "@vitejs/plugin-vue": "^5.2.1",
     "typescript": "~5.6.2",
     "vite": "^6.0.1",
