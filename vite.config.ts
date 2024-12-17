@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/4urneyRoadmap/', // Set this to your GitHub repository name
+  base: '/4urneyRoadmap/', // Correct base path
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
